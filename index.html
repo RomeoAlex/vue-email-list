@@ -12,7 +12,19 @@
 </head>
 <body>
     <div id="root">
-        <h2>{{ message }}</h2>
+       <!-- per stampare le email in contemporanea uso un condizionale sulla lunghezza dell'array -->
+       <div v-if="mails.length == 10">
+
+       
+        <!-- utilizzo un ciclo per stampare le email in una lista -->
+            <ul>
+                <li v-for="mail in mails">
+                    {{ mail }}
+                </li>
+            </ul>
+        </div> 
+        
+    
     </div>
     <script text="text/javascript" src="js/script.js"></script>
 </body>
